@@ -14,17 +14,16 @@ consumer_secret = "LKlBUQMvYmFAPnaccdz5uDsQWZ6yQ9UMXX6HvlI3n52o1fzUWS"
 class StdOutListener(StreamListener):
 
     def on_data(self, data):
-        print data
+        print(data)
         return True
 
     def on_error(self, status):
-        print status
+        print(status)
 
 
 if __name__ == '__main__':
 
-    #This handles Twitter authetification and the connection to Twitter 
-Streaming API
+    #This handles Twitter authetification and the connection to Twitter Streaming API
     l = StdOutListener()
     auth = OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_token_secret)
